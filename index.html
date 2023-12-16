@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random string</title>
+</head>
+<body>
+    <h1>Enter Value</h1>
+    <input type="number" id="f1">
+    <button onclick="fun()">Genrate</button><br><br>
+    <p id="s1"></p>
+    <script>
+        function fun(){
+            let length = document.getElementById("f1").value;
+            let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let f2 = ' ';
+            const charlength = char.length;
+            for(let i=0;i<length;i++){
+                f2 += char.charAt(Math.floor(Math.random()*charlength));
+            }
+
+           
+
+document.getElementById("s1").innerHTML = `Random string: ${f2}`;
+
+}
+    </script>
+</body>
+</html>
